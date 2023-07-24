@@ -3,3 +3,9 @@
 
 # build
 /build
+
+# env file
+.env
+
+# logs
+/logs

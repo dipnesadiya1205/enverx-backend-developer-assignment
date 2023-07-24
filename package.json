@@ -4,7 +4,12 @@
   "description": "[![N|Solid](https://iili.io/Hi9giog.png)](https://www.enverx.com/)",
   "main": "build/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format:check": "prettier --config .prettierrc 'src/**/*.ts' --check",
+    "format:write": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "dev:tsc": "tsc -w",
+    "dev:node": "nodemon build/server.js",
+    "dev": "npm run format:write && concurrently npm:dev:*",
+    "start": "npm run format:write && tsc && node build/server.js"
   },
   "repository": {
     "type": "git",
@@ -12,8 +17,40 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "18.13.0"
+  },
   "bugs": {
     "url": "https://github.com/dipnesadiya1205/enverx-backend-developer-assignment/issues"
   },
-  "homepage": "https://github.com/dipnesadiya1205/enverx-backend-developer-assignment#readme"
+  "homepage": "https://github.com/dipnesadiya1205/enverx-backend-developer-assignment#readme",
+  "dependencies": {
+    "@types/morgan": "^1.9.4",
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-status-codes": "^2.2.0",
+    "i18n": "^0.15.1",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.2.0",
+    "morgan": "^1.10.0",
+    "sha256": "^0.2.0",
+    "uuid": "^9.0.0",
+    "validator": "^13.9.0",
+    "winston": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/i18n": "^0.13.6",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/sha256": "^0.2.0",
+    "@types/uuid": "^9.0.1",
+    "@types/validator": "^13.7.17",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
 }

@@ -1,0 +1,37 @@
+{
+	"SERVER_ERROR_MESSAGE": "Internal Server Error",
+	"ERROR_MSG": "Something went wrong! Try again.",
+	"ERROR_MISSING_AUTH_TOKEN": "Access token missing from header.",
+	"UNAUTHORIZED": "Unauthorized Account",
+	"LOGIN": {
+		"SUCCESS": "Login successfully",
+		"FAIL": "Invalid email or password!"
+	},
+	"USER": {
+		"FOUND": "User is already exist!",
+		"NOT_FOUND": "User does not found!",
+		"GET_DETAIL": "User detail found successfully",
+		"ADD": "User added successfully",
+		"VALIDATION": {
+			"NAME": {
+				"required": "name is required",
+				"type": "name should be string"
+			},
+			"CONTACT_NO": {
+				"required": "contact_no is required",
+				"type": "contact_no should be number",
+				"valid": "contact_no contains only digits with length 10"
+			},
+			"EMAIL": {
+				"required": "email is required",
+				"type": "email should be valid",
+				"valid": "email length should be between 10 and 255"
+			},
+			"PASSWORD": {
+				"required": "password is required",
+				"type": "password should be string",
+				"valid": "password length should be between 8 and 16"
+			}
+		}
+	}
+}

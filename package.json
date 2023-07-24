@@ -1,0 +1,19 @@
+{
+  "name": "enverx-backend-developer-assignment",
+  "version": "1.0.0",
+  "description": "[![N|Solid](https://iili.io/Hi9giog.png)](https://www.enverx.com/)",
+  "main": "build/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/dipnesadiya1205/enverx-backend-developer-assignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dipnesadiya1205/enverx-backend-developer-assignment/issues"
+  },
+  "homepage": "https://github.com/dipnesadiya1205/enverx-backend-developer-assignment#readme"
+}

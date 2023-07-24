@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "72c0dd47-f462-4388-aea5-5fa5b00820a4",
+		"name": "Enverx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25805933"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Vishal Patel\",\n  \"contact_no\": \"9876543210\",\n  \"email\":\"vishal@gmail.com\",\n  \"password\":\"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4007/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"vishal@gmail.com\",\n  \"password\": \"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4007/api/v1/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmViYTcxYjJjZDk1YjFhNDMwMTk4ZiIsImlhdCI6MTY5MDIyMTIyMSwiZXhwIjoxNjkwMjI0ODIxfQ.cJs3f1B32WAPQqThaZTCr6bcGhjzuKs-N9YFVOvDUnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmUwNzM1M2JkYzg3NjUwYTg2YTdjZSIsImlhdCI6MTY4NTE3NTY0OCwiZXhwIjoxNjg1MTc5MjQ4fQ.NovojTiNUgYbhqBmHyhv43Dxvl0es8Ji6wDdlJQabXo",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:4007/api/v1/user/64beba71b2cd95b1a430198f",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"64beba71b2cd95b1a430198f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "add new post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmVkYjkxZGRjODY2ZDUxMjRhNjAwMyIsImlhdCI6MTY5MDIyOTY2OSwiZXhwIjoxNjkwMjMzMjY5fQ.gX5r6MKSHUXHoCP-Ge3duGMermk8AsSPFs4OoyIBXQs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"The intergenerational nature of India’s coal economy\",\n    \"content\": \"Generations of communities rely on coal for their livelihoods in India. Addressing these long-standing labour dynamics is crucial for designing appropriate just transition policy interventions.\",\n    \"category\": \"climate emergency\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4007/api/v1/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmViYTcxYjJjZDk1YjFhNDMwMTk4ZiIsImlhdCI6MTY5MDIyOTAyMywiZXhwIjoxNjkwMjMyNjIzfQ.6Dx4yCNVN9kz2pQnlMy63COg3Xsp2gIW3ETTJssC5Ew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"technology\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4007/api/v1/posts/64bedbe1ddc866d5124a6008",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"64bedbe1ddc866d5124a6008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmViYTcxYjJjZDk1YjFhNDMwMTk4ZiIsImlhdCI6MTY5MDIyOTAyMywiZXhwIjoxNjkwMjMyNjIzfQ.6Dx4yCNVN9kz2pQnlMy63COg3Xsp2gIW3ETTJssC5Ew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4007/api/v1/posts/64bedbe1ddc866d5124a6008",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"64bedbe1ddc866d5124a6008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmVkYjkxZGRjODY2ZDUxMjRhNjAwMyIsImlhdCI6MTY5MDIyOTY2OSwiZXhwIjoxNjkwMjMzMjY5fQ.gX5r6MKSHUXHoCP-Ge3duGMermk8AsSPFs4OoyIBXQs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4007/api/v1/posts/64bedbe1ddc866d5124a6008",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"64bedbe1ddc866d5124a6008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmViYTcxYjJjZDk1YjFhNDMwMTk4ZiIsImlhdCI6MTY5MDIyOTAyMywiZXhwIjoxNjkwMjMyNjIzfQ.6Dx4yCNVN9kz2pQnlMy63COg3Xsp2gIW3ETTJssC5Ew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4007/api/v1/posts?content=rights",
+							"host": [
+								"localhost"
+							],
+							"port": "4007",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "gender",
+									"disabled": true
+								},
+								{
+									"key": "sortFields",
+									"value": "category -created_at",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "women",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "rights"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

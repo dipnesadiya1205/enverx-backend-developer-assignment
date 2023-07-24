@@ -9,7 +9,7 @@
 	},
 	"USER": {
 		"FOUND": "User is already exist!",
-		"NOT_FOUND": "User does not found!",
+		"NOT_FOUND": "User not found!",
 		"GET_DETAIL": "User detail found successfully",
 		"ADD": "User added successfully",
 		"VALIDATION": {
@@ -31,6 +31,30 @@
 				"required": "password is required",
 				"type": "password should be string",
 				"valid": "password length should be between 8 and 16"
+			}
+		}
+	},
+	"POST": {
+		"ADD": "Post added successfully",
+		"NOT_FOUND": "Post not found!",
+		"FOUND": "Post detail found successfully",
+		"UPDATE": "Post updated successfully",
+		"DELETE": "Post deleted successfully",
+		"VALIDATION": {
+			"TITLE": {
+				"required": "title is required",
+				"type": "title should be string",
+				"valid": "title length should be less than 255"
+			},
+			"CONTENT": {
+				"required": "content is required",
+				"type": "content should be string",
+				"valid": "content length should be less than 1000"
+			},
+			"CATEGORY": {
+				"required": "category is required",
+				"type": "category should be string",
+				"valid": "category length should be less than 50"
 			}
 		}
 	}

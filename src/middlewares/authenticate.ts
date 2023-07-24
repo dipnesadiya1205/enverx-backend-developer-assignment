@@ -38,7 +38,6 @@ class Authorization {
 
 			next()
 		} catch (error: any) {
-			console.log(error)
 			createResponse(res, STATUS_CODE.INTERNAL_SERVER_ERROR, res.__('SERVER_ERROR_MESSAGE'), error)
 		}
 	}

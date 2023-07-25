@@ -37,7 +37,24 @@ example:
 - mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority
 ```
 2. Create ```.env``` file for database configuration, server port and jwt signature
-3. Replace all variables of connection string with yours through ```.env``` file 
+3. Replace all variables of connection string with yours through ```.env``` file
+4. Variables to set in ```.env``` file.
+   ``` diff
+      # Environment
+      ENV = "localhost"
+
+      # Node Server Port
+      NODE_PORT
+
+      # MongoDB Configuration
+      DB_HOST
+      DB_USER
+      DB_PASSWORD
+      DB_NAME
+
+      # JWT Secret Key
+      JWT_SECRET_KEY
+   ```
 
 ### Functional Implementation
 1. Endpoints for User sign up, login and get details
